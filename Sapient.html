@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sapient AI</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <style>
+      #AI-solution {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      #AI-solution h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      .ai-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .ai-image img {
+        max-width: 500px; /* Adjust size as needed */
+        height: 500px;
+        border-radius: 10px;
+      }
+
+      .chat-container {
+        flex: 1;
+        max-width: 500px;
+      }
+
+      #chat-box {
+        height: 400px;
+        overflow-y: auto;
+        border: 1px solid #ccc;
+        padding: 10px;
+        background: #f9f9f9;
+        border-radius: 10px;
+      }
+
+      .message {
+        margin: 5px 0;
+        color: #000;
+        text-align: justify;
+      }
+
+      #chat-form {
+        display: flex;
+        margin-top: 10px;
+        width: 100%;
+      }
+
+      #user-input {
+        flex: 1;
+        padding: 25px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+
+      #chat-form button {
+        padding: 8px 15px;
+        background-image: linear-gradient(218deg, #ff759f 56%, #ff196e);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 30%;
+      }
+      #chat-form button:hover {
+        background-image: linear-gradient(218deg, #ff759f 56%, #ff196e);
+      }
+      .social-icons a {
+        font-size: 24px;
+        margin-right: 15px;
+        color: #000000; /* Change color as needed */
+        transition: color 0.3s;
+      }
+
+      .social-icons a:hover {
+        color: #ff196e; /* Change hover color */
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="Logo.svg" alt="Company Logo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="https://sapps.app/">Home</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#cta">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="https://sapps.app/sapient-ai" target="_blank">
+        <button class="cta-button">Sapient AI</button>
+      </a>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <h1>Sapient - AI Tutor Chatbot Powered by Nvidia Riva SDK</h1>
+        <p>
+          Personalized learning assistance at your fingertips. Get instant
+          support, AI-driven explanations, and real-time feedback to accelerate
+          your learning journey.
+        </p>
+        <a href="https://sapps.app/contact" target="_blank">
+          <button class="cta-button">1 Month Free Trial</button>
+        </a>
+      </div>
+
+      <div class="hero-image">
+        <img src="herobg.webp" alt="AI Tutor Illustration" />
+      </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+      <h2>How It Works</h2>
+      <div class="grid-container">
+        <div class="grid-item">
+          <h3 data-number="1">Ask a Question</h3>
+          <p>
+            Type your query, and our AI will start processing your request
+            instantly.
+          </p>
+        </div>
+        <div class="grid-item">
+          <h3 data-number="2">AI Analyzes</h3>
+          <p>
+            Our advanced AI model analyzes your question, understanding its
+            intent.
+          </p>
+        </div>
+        <div class="grid-item">
+          <h3 data-number="3">Get Instant Response</h3>
+          <p>
+            Receive a quick, well-structured, and accurate response tailored to
+            your needs.
+          </p>
+        </div>
+        <div class="grid-item">
+          <h3 data-number="4">Improve Learning</h3>
+          <p>
+            Refine your knowledge with AI-generated insights and explanations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="AI-solution">
+      <h1>Sapient - AI Tutor Chatbot</h1>
+      <div class="ai-container">
+        <div class="ai-image">
+          <img src="tutor.jpg" alt="AI Tutor Image" />
+        </div>
+        <div class="chat-container">
+          <div id="chat-box"></div>
+          <form id="chat-form">
+            <input
+              type="text"
+              id="user-input"
+              placeholder="Type your message..."
+              required
+            />
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits" class="benefits">
+      <h2>Why Choose AI Tutor?</h2>
+      <div class="grid-container">
+        <div class="grid-item">• AI-driven personalized learning paths</div>
+        <div class="grid-item">• 24/7 instant tutoring support</div>
+        <div class="grid-item">• Real-time feedback & performance tracking</div>
+        <div class="grid-item">• Interactive AI-powered explanations</div>
+        <div class="grid-item">• Adaptive learning tailored to skill level</div>
+        <div class="grid-item">
+          • Voice-enabled assistance for hands-free learning
+        </div>
+        <div class="grid-item">
+          • Multilingual support for global accessibility
+        </div>
+        <div class="grid-item">
+          • Seamless integration with existing learning platforms
+        </div>
+        <div class="grid-item">
+          • AI-powered insights for educators & learners
+        </div>
+        <div class="grid-item">
+          • Secure, scalable, and future-ready education
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-wrapper">
+        <!-- Left Side: FAQ Content -->
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              - What is AI Tutor and how does it work?
+              <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                AI Tutor is an intelligent learning assistant that provides
+                personalized guidance, real-time feedback, and interactive
+                lessons using AI-powered algorithms.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              - Can AI Tutor help with multiple subjects?
+              <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes! AI Tutor supports a wide range of subjects, from
+                mathematics and science to language learning and coding,
+                adapting to each learner's needs.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              - How does AI Tutor personalize learning?
+              <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                AI Tutor analyzes your learning progress, strengths, and
+                weaknesses to create customized study plans, ensuring a more
+                effective and engaging experience.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              - Is AI Tutor available 24/7? <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, AI Tutor is accessible anytime, allowing learners to study
+                at their own pace, whenever they need assistance.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              - Does AI Tutor provide instant feedback?
+              <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Absolutely! AI Tutor evaluates your answers in real time,
+                offering instant corrections and explanations to improve
+                understanding.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              - Is AI Tutor suitable for educators as well?
+              <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, educators can use AI Tutor to enhance lesson planning,
+                provide automated assessments, and track student progress with
+                AI-driven insights.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              - Is AI Tutor safe for children to use?
+              <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes! AI Tutor is designed with child safety in mind, featuring
+                content moderation, privacy protection, and parental controls to
+                ensure a secure learning environment.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              - Can I use AI Tutor on different devices?
+              <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Absolutely! AI Tutor is accessible on desktops, tablets, and
+                smartphones, allowing seamless learning across multiple devices.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Image -->
+        <div class="faq-image">
+          <img src="faq.webp" alt="AI Tutor Illustration" />
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="cta">
+      <h2>Start Your AI-Powered Learning Journey Today</h2>
+      <p>
+        Experience next-level education with our AI-driven tutor, powered by
+        NVIDIA Riva SDK. Enjoy real-time assistance, intelligent feedback, and
+        personalized learning tailored just for you.
+      </p>
+      <a href="https://sapps.app/contact" target="_blank">
+        <button class="cta-button">Get Started Now ($99 per month)</button>
+      </a>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <!-- First Column: Logo, Elevator Pitch, Social Media -->
+        <div class="footer-column">
+          <img src="Logo_Footer.svg" alt="Company Logo" class="footer-logo" />
+          <p class="elevator-pitch">
+            Sapps.app is an AI-driven learning platform that personalizes
+            education and optimizes progress.
+          </p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/sapps.app.llc/"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/app_sapps"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/sapps-app-llc/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/@Sapps-App"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.pinterest.com/sappsappLLC/"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+
+        <!-- Second Column: Company Links -->
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Third Column: Resources -->
+        <div class="footer-column">
+          <h3>Other Links</h3>
+          <ul>
+            <li><a href="#">Success Stories</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Fourth Column: Contact -->
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <ul>
+            <li>+13088436810</li>
+            <li>hello@sapps.app</li>
+            <li>258 Bowery, New York, NY 10003, United States.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="footer-copyright">
+        <p>&copy;2025 All rights reserved. Sapps App.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script>
+  document.querySelectorAll(".faq-question").forEach((button) => {
+    button.addEventListener("click", function () {
+      const answer = this.nextElementSibling;
+      answer.style.display =
+        answer.style.display === "block" ? "none" : "block";
+    });
+  });
+  document.addEventListener("DOMContentLoaded", function () {
+    const chatForm = document.getElementById("chat-form");
+    const userInput = document.getElementById("user-input");
+    const chatBox = document.getElementById("chat-box");
+
+    chatForm.addEventListener("submit", async function (event) {
+      event.preventDefault();
+      const message = userInput.value.trim();
+      if (message === "") return;
+
+      // Display user message
+      appendMessage("You", message);
+      userInput.value = "";
+
+      try {
+        const response = await fetch("http://localhost:5000/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text: message }),
+        });
+
+        if (!response.ok) throw new Error("Failed to fetch response");
+
+        const data = await response.json();
+        appendMessage("AI Tutor", data.response);
+      } catch (error) {
+        appendMessage(
+          "Tutor",
+          "Answer in process.....Please wait for AI response."
+        );
+        console.error("Error:", error);
+      }
+    });
+
+    function appendMessage(sender, message) {
+      const messageDiv = document.createElement("div");
+      messageDiv.classList.add("message");
+      messageDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+      chatBox.appendChild(messageDiv);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+  });
+</script>
